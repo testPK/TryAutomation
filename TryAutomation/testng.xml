@@ -3,8 +3,8 @@
 <suite name="Suite" parallel="none">
   <test name="Test">
   	<classes>
-  		<class name="Test1" />
-  		<class name="Test2" /> 
+  		<class name="SmokeTest.Test1" />
+  		<class name="SmokeTest.Test2" /> 
   	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
