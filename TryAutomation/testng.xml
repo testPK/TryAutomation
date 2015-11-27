@@ -4,6 +4,8 @@
   <test name="Test">
   	<classes>
   		<class name="SmokeTest.Test1" />
+  		<class name="SmokeTest.Test2" />
+  		<class name="SmokeTest.Test3" />
   	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

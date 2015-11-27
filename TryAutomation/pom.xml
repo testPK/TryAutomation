@@ -39,6 +39,53 @@
 				</suiteXmlFiles>
 			</configuration>
 		</plugin>  
+		
+		
+		<plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>send surefire notification</id>
+						<phase>install</phase>
+						<goals>
+							<goal>send-mail</goal>
+						</goals>
+						<inherited>false</inherited>
+						<configuration>
+							<from>alikhite@lampsplus.com</from>
+							<subject>QA test automation - execution result report.</subject>
+							<groovyCondition><![CDATA[errors > 0 || failures > 0]]></groovyCondition>
+							<failonerror>true</failonerror>
+							<mailhost>webmail.lampsplus.com</mailhost>
+							<!-- Need to request an appropriate Exchange account for Automation -->
+							<mailuser>jingyis</mailuser>
+							<mailpassword>xxxxxxxx</mailpassword>
+							<htmlMessageFile>target/surefire-reports/emailable-report.html</htmlMessageFile>
+							<receivers>
+								<!-- Removed groups per Chris' request. Awaiting a response from 
+									Support to fix DL -->
+								
+								<receiver>VKathi@lampsplus.com</receiver>
+								<receiver>pkothavale@lampsplus.com</receiver>
+							</receivers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		
+		
     </plugins>
+    
   </build>
+  
+  <reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.18.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>
