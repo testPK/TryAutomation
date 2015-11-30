@@ -37,6 +37,10 @@
 				<suiteXmlFiles>
 					<suiteXmlFile>${suite.name}</suiteXmlFile>
 				</suiteXmlFiles>
+				<systemPropertyVariables>
+					<environment>${environment}</environment>
+				</systemPropertyVariables>
+				
 			</configuration>
 		</plugin>  
 		
