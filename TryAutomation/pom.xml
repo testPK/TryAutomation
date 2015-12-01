@@ -37,9 +37,9 @@
 				<suiteXmlFiles>
 					<suiteXmlFile>.\\testng.xml</suiteXmlFile>
 				</suiteXmlFiles>
-		     	<systemPropertyVariables>
+		  <!--     	<systemPropertyVariables>
 					<environment>${environment}</environment>
-				</systemPropertyVariables>    
+				</systemPropertyVariables>    -->
 				
 			</configuration> 
 		</plugin>  
